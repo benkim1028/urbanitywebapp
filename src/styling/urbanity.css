@@ -1,0 +1,49 @@
+#Navbar-Login {
+    color: #f9892d;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    border: solid 1px #ffffff;
+}
+#Navbar-Search {
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffa31d;
+    border: solid 1px #ffffff;
+}
+#Search-Bar{
+    border-radius: 5px;
+    background-color: #f9892d;
+}
+#Text{
+    color: #fb990b;
+}
+#Shadow-Box{
+    box-shadow: 10px 10px 10px grey;
+}
+#Text-Button{
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    border-radius: 5px;
+    margin-top: 25%;
+}
+
+input::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input:-ms-input-placeholder {
+    color: white !important;
+}
