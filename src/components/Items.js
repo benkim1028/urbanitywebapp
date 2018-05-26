@@ -5,7 +5,7 @@ import Item from "./Item";
 
 export default class Items extends Component {
     renderItems(){
-        return _.map(data,(data) => <Grid.Column><Item url={data.url} title={data.title} price={data.price} area={data.area} description={data.description} like={data.like}/></Grid.Column>)
+        return _.map(data,(data) => <Grid.Column><Item key={data.url} url={data.url} title={data.title} price={data.price} area={data.area} description={data.description} like={data.like}/></Grid.Column>)
     }
 
     render() {

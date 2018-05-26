@@ -90,17 +90,17 @@
 @bulletTop: 1px;
 @bulletLeft: 0px;
 @bulletScale: (7 / 15); /* 7px as unitless value from radio size */
-@bulletColor: @textColor;
+@bulletColor: #fb990b;
 @bulletRadius: @circularRadius;
 
 @radioFocusBackground: @checkboxFocusBackground;
 @radioFocusBulletColor: @checkboxFocusCheckColor;
 
 @radioActiveBackground: @checkboxActiveBackground;
-@radioActiveBulletColor: @checkboxActiveCheckColor;
+@radioActiveBulletColor: #fb990b;
 
 @radioActiveFocusBackground: @checkboxActiveFocusBackground;
-@radioActiveFocusBulletColor: @checkboxActiveFocusCheckColor;
+@radioActiveFocusBulletColor: #fb990b;
 
 /* Slider & Toggle Handle */
 @handleBackground: @white @subtleGradient;
