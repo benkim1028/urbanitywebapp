@@ -2,7 +2,7 @@ import * as _ from "lodash"
 import React, {Component} from 'react'
 import {Form, Grid, Radio, Segment} from "semantic-ui-react";
 
-export default class Browse extends Component {
+export default class CategoryList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -46,5 +46,5 @@ export default class Browse extends Component {
     }
 }
 
-const list = ["All Categories", "Electronics & Gadget", "Photography", "Ladies' Fashion", "Gentlemen's Fashion", "Video Gaming/Hobby", "Sporting", "Furniture & Appliances", "Parents, Babies & Kids", "Cars & Motorbikes", "Books & Stationary", "Tickets", "Pet Items", "Vintage, Antiques & Collectibles", "Gardening & Plants", "Property", "Others"];
+const list = ["All Categories", "Electronics & Gadget", "Photography", "Ladies' Fashion", "Gentlemen's Fashion", "Video Gaming/Hobby", "Sporting", "Furniture & Appliances", "Parents, Babies & Kids", "Cars & Motorbikes", "Books & Stationary", "Tickets", "Pet ItemList", "Vintage, Antiques & Collectibles", "Gardening & Plants", "Property", "Others"];
 

@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
-import NavBar from "../Navbar";
+import MainMenu from "../MainMenu";
 import SubMenu from "../SubMenu";
-import Items from "../Items";
+import ItemList from "../ItemList";
 
 export default class Page1 extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
+                <MainMenu/>
                 <SubMenu/>
-                <Items/>
+                <ItemList/>
             </div>
         )
     }

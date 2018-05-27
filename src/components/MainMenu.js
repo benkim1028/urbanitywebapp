@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Button, Container, Divider, Icon, Image, Input, Menu, Segment} from 'semantic-ui-react'
 import SubMenu from "./SubMenu";
 
-export default class NavBar extends Component {
+export default class MainMenu extends Component {
     state = {activeItem: 'home'};
 
     handleItemClick = (e, {name}) => this.setState({activeItem: name});

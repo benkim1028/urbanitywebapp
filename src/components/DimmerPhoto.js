@@ -2,8 +2,6 @@ import React, {Component} from 'react'
 import {Button, Dimmer, Image} from 'semantic-ui-react'
 
 export default class DimmerPhoto extends Component {
-
-
     render() {
         const active = this.props.isMouseOver;
         var style;

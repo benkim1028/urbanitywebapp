@@ -3,7 +3,7 @@ import * as _ from 'lodash';
 import {Card, Container, Grid, Header, Icon, Image, Segment} from "semantic-ui-react";
 import Item from "./Item";
 
-export default class Items extends Component {
+export default class ItemList extends Component {
     renderItems(){
         return _.map(data,(data) => <Grid.Column><Item key={data.url} url={data.url} title={data.title} price={data.price} area={data.area} description={data.description} like={data.like}/></Grid.Column>)
     }

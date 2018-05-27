@@ -3,11 +3,10 @@ import 'styling/semantic.less'
 import "../src/styling/urbanity.css"
 
 import React from 'react'
-import Navbar from "./components/Navbar";
-import Page1 from "../src/components/page1/page1";
+import Page from "../src/components/pages/page1";
 
 const App = () => (
-    <Page1/>
+    <Page/>
 )
 
 export default App
