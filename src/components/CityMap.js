@@ -16,7 +16,7 @@ export class CityMap extends Component {
         this.setState({
             bounds: null,
             center: {
-                lat: 41.9, lng: -87.624
+                lat: 49.2577143, lng: -123.1939434
             },
             markers: [],
             onMapMounted: ref => {
@@ -62,7 +62,7 @@ export class CityMap extends Component {
         return (
             <GoogleMap
                 ref={props.onMapMounted}
-                defaultZoom={15}
+                defaultZoom={12}
                 center={props.center}
                 onBoundsChanged={props.onBoundsChanged}
             >
@@ -73,7 +73,7 @@ export class CityMap extends Component {
                     onPlacesChanged={props.onPlacesChanged}
                 >
                     <Input
-                        placeholder="Search..."
+                        placeholder="Search City"
                         id='Search-Map'
                     />
                 </SearchBox>
