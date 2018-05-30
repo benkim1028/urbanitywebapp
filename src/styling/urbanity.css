@@ -4,6 +4,11 @@
     background-color: #ffffff;
     border: solid 1px #ffffff;
 }
+#Navbar-LogOut {
+    color: #ffffff;
+    background-color: #ffa31d;
+    border: 0;
+}
 #Navbar-Search {
     color: #ffffff;
     border-radius: 5px;
@@ -12,6 +17,7 @@
     border: solid 1px #ffffff;
 }
 #Search-Bar{
+    height: 35px;
     border-radius: 5px;
     background-color: #f9892d;
 }
@@ -44,8 +50,41 @@
     font-size: 14px;
     outline: none;
 }
+#Menu-Id-Tag{
+    padding: 0.85714286em 1.14285714em;
+}
+#Vertical-Center{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#Id-Tag{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
 #Search-Map::placeholder{
     color: #707070
+}
+#Submenu-Item{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#Submenu-Item-Grey-Out{
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 0.25;
+}
+#Modal-Button{
+    background-color:#ffa31d;
+    color:#ffffff;
+    text-align:center;
+    height: 50px;
+    width: 40%;
+}
+.visible.transition {
+    display: flex !important;
+    flex-direction: column;
 }
 input::-webkit-input-placeholder {
     color: white

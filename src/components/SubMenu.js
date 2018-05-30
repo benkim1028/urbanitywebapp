@@ -4,7 +4,6 @@ import CategoryList from "./CategoryList";
 import {MapWithHOC} from "./CityMap";
 import SortbyList from "./SortbyList";
 
-
 export default class SubMenu extends Component {
     constructor(props) {
         super(props);
@@ -37,20 +36,17 @@ export default class SubMenu extends Component {
     }
 
     isSelected(menu) {
-        if (this.state.active === menu)
-            return '▴'
-        else
-            return '▾'
+        return this.state.active === menu || this.state.active === "";
     }
     categorySubmenu() {
+        const style = this.isSelected("category") ? 'Submenu-Item' : 'Submenu-Item-Grey-Out';
         return (
             <Popup
                 trigger={
-                    <Menu.Item style={{marginLeft: 5 + "%", marginRight: 5 + "%"}}
-                               onClick={() => this.handleActive("category")}>
+                    <Menu.Item id={style} disabled={this.state.active !== 'category' && this.state.active !== ''}>
                         <Header textAlign='left' as='h4'>
                             <Header.Content id='Text'>
-                                Category {this.isSelected("category")}
+                                Category {this.state.active !== "" && this.isSelected("category") ? '▴' : '▾'}
                             </Header.Content>
                             <Header.Subheader>
                                 {this.state.subCategory}
@@ -58,26 +54,28 @@ export default class SubMenu extends Component {
                         </Header>
                     </Menu.Item>
                 }
+                basic
                 content={<CategoryList subCategory={this.state.subCategory}
                                        changeSubCategory={this.handleSubCategory}/>}
                 on='click'
                 position='bottom center'
-                basic
                 style={{minWidth: 60 + "%", left: 20 + "%", right: 20 + "%"}}
+                onClose={() => this.setState({active: ""})}
+                onOpen={() => this.handleActive("category")}
             >
             </Popup>
         )
     }
 
     citySubmenu() {
+        const style = this.isSelected("city") ? 'Submenu-Item' : 'Submenu-Item-Grey-Out';
         return (
             <Popup
                 trigger={
-                    <Menu.Item style={{marginLeft: 5 + "%", marginRight: 5 + "%"}}
-                               onClick={() => this.handleActive("city")}>
+                    <Menu.Item id={style} disabled={this.state.active !== 'city' && this.state.active !== ''}>
                         <Header textAlign='left' as='h4'>
                             <Header.Content id='Text'>
-                                City {this.isSelected("city")}
+                                City {this.state.active !== "" && this.isSelected("city") ? '▴' : '▾'}
                             </Header.Content>
                             <Header.Subheader>
                                 {this.state.city}
@@ -93,10 +91,12 @@ export default class SubMenu extends Component {
                         containerElement={<div style={{height: `400px`}}/>}
                         mapElement={<div style={{height: `100%`}}/>}
                     />}
+                basic
                 on='click'
                 position='bottom center'
-                basic
                 style={{minWidth: 60 + "%", left: 20 + "%", right: 20 + "%"}}
+                onClose={() => this.setState({active: ""})}
+                onOpen={() => this.handleActive("city")}
 
             >
             </Popup>
@@ -104,14 +104,14 @@ export default class SubMenu extends Component {
     }
 
     sortbySubmenu() {
+        const style = this.isSelected("sortby") ? 'Submenu-Item' : 'Submenu-Item-Grey-Out';
         return (
             <Popup
                 trigger={
-                    <Menu.Item style={{marginLeft: 5 + "%", marginRight: 5 + "%"}}
-                               onClick={() => this.handleActive("sortby")}>
+                    <Menu.Item id={style} disabled={this.state.active !== 'sortby' && this.state.active !== ''}>
                         <Header textAlign='left' as='h4'>
                             <Header.Content id='Text'>
-                                Sort By {this.isSelected("sortby")}
+                                Sort By {this.state.active !== "" && this.isSelected("sortby") ? '▴' : '▾'}
                             </Header.Content>
                             <Header.Subheader>
                                 {this.state.sortBy}
@@ -119,10 +119,12 @@ export default class SubMenu extends Component {
                         </Header>
                     </Menu.Item>
                 }
-                content={<SortbyList changeSortby={this.handleSortby}/>}
+                basic
+                content={<SortbyList changeSortby={this.handleSortby} sortBy={this.state.sortBy}/>}
                 on='click'
                 position='bottom center'
-                basic
+                onClose={() => this.setState({active: ""})}
+                onOpen={() => this.handleActive("sortby")}
             >
             </Popup>
         )

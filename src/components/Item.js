@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {Button, Card, Container, Grid, Header, Icon, Image, Segment} from "semantic-ui-react";
 import DimmerPhoto from "./DimmerPhoto";
+import ItemDropdown from "./ItemDropdown";
+import ReportModal from "./ReportModal";
 
 export default class Item extends Component {
     constructor(props) {
@@ -24,7 +26,7 @@ export default class Item extends Component {
 
     hiddenElement() {
         return (
-            <Container style={{paddingTop: 5 + "px",}}>
+            <Container style={{color: '#707070', paddingTop: 5 + "px",}}>
                 <p>{this.props.description}</p>
                 <Card.Content style={{fontSize: 20 + "px", fontWeight: 'bold'}} extra>
                     <Container style={{display: 'flex', justifyContent: 'space-between'}}>
@@ -33,7 +35,7 @@ export default class Item extends Component {
                             {this.props.like}
                         </div>
                         <a>
-                            <Icon id='Text' name='ellipsis horizontal' onClick={()=>alert("Placeholder")}/>
+                            <ReportModal/>
                         </a>
                     </Container>
                 </Card.Content>
@@ -44,14 +46,14 @@ export default class Item extends Component {
 
     render() {
         return (
-            <Card onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover}>
+            <Card onClick={this.handleMouseHover}>
                 <DimmerPhoto isMouseOver={this.state.isMouseOver} url={this.props.url}/>
                 <Card.Content>
                     <Card.Header>
                         {this.props.title} <Icon id='Text' style={{fontSize: 18 + "px"}} as='i' name='angle right'
                                                  size='small'/>
                     </Card.Header>
-                    <Container style={{display: 'flex', justifyContent: 'space-between', paddingTop: 5 + "px"}}>
+                    <Container style={{display: 'flex', color: '#707070', justifyContent: 'space-between', paddingTop: 5 + "px"}}>
                         <p>{this.props.price}</p>
                         <p>{this.props.area}</p>
                     </Container>

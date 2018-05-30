@@ -15,7 +15,7 @@ export default class DimmerPhoto extends Component {
                 dimmed={active}
             >
                 <Dimmer active={active}>
-                    <Button id='Text-Button' inverted>See Full Description</Button>
+                    <Button id='Text-Button' onClick={() => alert("place holder")} inverted>See Full Description</Button>
                 </Dimmer>
                 <div style={style}>
                     <Image src={this.props.url}/>

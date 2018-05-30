@@ -7,7 +7,6 @@ import {Input} from "semantic-ui-react";
 export class CityMap extends Component {
     constructor(props) {
         super(props);
-
     }
 
     componentWillMount() {
@@ -69,7 +68,7 @@ export class CityMap extends Component {
                 <SearchBox
                     ref={props.onSearchBoxMounted}
                     bounds={props.bounds}
-                    controlPosition={google.maps.ControlPosition.TOP_LEFT}
+                    controlPosition={google.maps.ControlPosition.TOP_CENTER}
                     onPlacesChanged={props.onPlacesChanged}
                 >
                     <Input
