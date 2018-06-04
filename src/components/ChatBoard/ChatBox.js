@@ -97,7 +97,9 @@ export default class ChatBox extends Component {
             border: 1 + 'px' + ' ' + 'solid',
             borderColor: '#ffa31d',
             borderRadius: 5 + 'px'
-          }} value={this.state.newMessage}
+          }}
+                 value={this.state.newMessage}
+                 autoComplete='off'
                  onChange={this.handleInputChange}></input>
           <Button style={{
             backgroundColor: 'transparent',
@@ -115,7 +117,8 @@ export default class ChatBox extends Component {
     var length = messages.length;
     messages.push({uid: length, userid: 'me', message: this.state.newMessage});
     this.setState({
-      messages: messages
+      messages: messages,
+      newMessage: ''
     });
     e.preventDefault();
   }
@@ -146,7 +149,7 @@ export default class ChatBox extends Component {
             color: '#707070',
             fontWeight: 'normal',
             marginTop: '5px',
-            marginBottom: '5px'
+            marginBottom: '5px',
           }}
           key={data.uid} floated='right' compact content={data.message}/>
       </Container>
@@ -181,7 +184,8 @@ export default class ChatBox extends Component {
             {this.renderOffer()}
           </Container>
         </Segment>
-        <Segment style={{backgroundColor: '#f9f9f9', minHeight: '70%', display: 'flex', flexDirection: 'column'}} attached>
+        <Segment style={{backgroundColor: '#f9f9f9', minHeight: '70%', display: 'flex', flexDirection: 'column'}}
+                 attached>
           {this.renderMessages()}
           {this.renderInputBar()}
         </Segment>
