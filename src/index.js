@@ -6,8 +6,8 @@ import App from './App'
 
 const render = (Component) =>
     ReactDOM.render(
-        <AppContainer>
-            <Component/>
+        <AppContainer style={{height: '100%'}}>
+            <Component style={{height: '100%'}}/>
         </AppContainer>,
         document.getElementById('root'),
     )
